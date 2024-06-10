@@ -5,7 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity"
+    tools:layout_editor_absoluteX="-3dp"
+    tools:layout_editor_absoluteY="-46dp">
 
     <TextView
         android:id="@+id/txtTitulo"
@@ -19,7 +21,24 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.083" />
+
+    <EditText
+        android:id="@+id/editSobrenome"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:hint="@string/txt_hint_edit_sobrenome"
+        android:inputType="textPersonName"
+        android:paddingStart="40px"
+        android:textAlignment="viewStart"
+        android:textColorHint="@color/btgTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPrimeiroNome" />
 
     <EditText
         android:id="@+id/editPrimeiroNome"
@@ -27,66 +46,116 @@
         android:layout_height="48dp"
         android:layout_margin="16dp"
         android:layout_marginTop="16dp"
-        android:ems="10"
+        android:background="@drawable/rounded_edit_text"
         android:hint="@string/txt_hint_edit_primeiro_nome"
-        android:inputType="text"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="@color/btgTxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
-    <EditText
-        android:id="@+id/editSobrenome"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_margin="16dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/txt_hint_edit_sobrenome"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPrimeiroNome" />
 
-    <EditText
-        android:id="@+id/editNomeCurso"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_margin="16dp"
-        android:layout_marginTop="32dp"
-        android:width="16dp"
-        android:ems="10"
-        android:hint="@string/txt_hint_edit_nome_do_curso"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editSobrenome" />
 
     <EditText
         android:id="@+id/editTelefoneContato"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_edit_text"
         android:ems="10"
         android:hint="@string/txt_hint_edit_telefone_contato"
-        android:inputType="text"
+        android:inputType="textPersonName"
+        android:paddingStart="40px"
+        android:textAlignment="viewStart"
+        android:textColor="@color/btgTxt"
+        android:textColorHint="@color/btgTxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editNomeCurso" />
+
+    <EditText
+        android:id="@+id/editNomeCurso"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="24dp"
+        android:width="16dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:hint="@string/txt_hint_edit_nome_do_curso"
+        android:inputType="textPersonName"
+        android:paddingStart="40px"
+        android:textAlignment="viewStart"
+        android:textColor="@color/btgTxt"
+        android:textColorHint="@color/btgTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSobrenome" />
+
+    <TextView
+        android:id="@+id/txtListaSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/selecione_um_curso"
+        android:textAlignment="viewStart"
+        android:textColor="@color/btgTxt"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTelefoneContato"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="354dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edit_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/btnSalvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefoneContato"
+        app:layout_constraintVertical_bias="0.545" />
+
+
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="329dp"
+        android:layout_height="59dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="148dp"
+        android:backgroundTint="@color/black"
+        android:hint="@string/txt_button_finalizar"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.597"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefoneContato"
+        app:layout_constraintVertical_bias="0.584" />
 
     <Button
         android:id="@+id/btnLimpar"
         android:layout_width="125dp"
         android:layout_height="52dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="44dp"
         android:layout_marginBottom="68dp"
         android:backgroundTint="@color/black"
         android:backgroundTintMode="add"
-        android:text="@string/txt_button_limpar"
+        android:hint="@string/txt_button_limpar"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editNomeCurso"
@@ -96,28 +165,14 @@
         android:id="@+id/btnSalvar"
         android:layout_width="125dp"
         android:layout_height="52dp"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="64dp"
         android:layout_marginBottom="68dp"
         android:backgroundTint="@color/black"
-        android:text="@string/txt_button_salvar"
+        android:hint="@string/txt_button_salvar"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
         app:layout_constraintStart_toEndOf="@+id/btnLimpar"
         app:layout_constraintTop_toBottomOf="@+id/editNomeCurso"
         app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/btnFinalizar"
-        android:layout_width="384dp"
-        android:layout_height="58dp"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="148dp"
-        android:backgroundTint="@color/black"
-        android:text="@string/txt_button_finalizar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefoneContato"
-        app:layout_constraintVertical_bias="0.465" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
